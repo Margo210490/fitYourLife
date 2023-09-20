@@ -1,0 +1,1132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Serif', serif;
+}
+.main-container{
+  padding: 0 12px;
+}
+/* Стилі для прелоадера */
+.loader {
+  position: relative;
+  width: 64px;
+  height: 60px;
+  margin: 0 auto;
+  top: calc(50% - 30px);
+}
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #2af5f5;
+  width: 64px;
+  height: 32px;
+  border-radius: 0 0 50px 50px;
+  animation: move 0.5s linear infinite alternate;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #f086d9;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes move {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+/* Стилі нав-бара */
+.navbar {
+  /* padding: 10px 0; */
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+.nav-item {
+  position: relative;
+}
+.nav-link {
+  padding: 8px 10px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+}
+.nav-item:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f086d9;
+  background-image: linear-gradient(to right, #faa7de 0%, #96d9fb 100%);
+  z-index: -1;
+  border-radius: 5px;
+  height: 100px;
+}
+.nav-link:hover {
+  color: white;
+}
+.navbar-logo img {
+  width: 100px;
+}
+/* Стилі для головного блоку */
+.main-block {
+  background-image:url(..//img/pexels-david-gomes-2647471.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff; 
+  padding: 100px 0;
+  background-size: 100% auto;
+  height: 700px;
+}
+.main-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20% 0 3% 0;
+}
+.main-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.btn{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #FF66CC 0%, #66CCFF 51%, #9933FF 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  border: none;
+}
+.btn:hover {
+  background-position: right center;
+}
+/* Стилі для блоку з інформацією про тренера та фотографією */
+.trainer-block {
+  background-color: #f7f7f7; 
+  padding: 70px 0;
+}
+.trainer-heading {
+  font-size: 40px;
+  font-weight: bold;
+}
+.trainer-info {
+  font-size: 16px;
+  text-align: justify; 
+  line-height: 40px;
+}
+.trainer-photo {
+  max-width: 70%;
+  border-radius: 5px;
+  margin-left: 29%;
+}
+/* Стилі для слайдера з сертифікатами */
+.owl-carousel {
+  max-width: 1300px; 
+  margin: 0 auto; 
+  border-radius: 10px;
+}
+/* Стилі для слайдів */
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.owl-carousel .item img {
+  max-width: 100%;
+  height: auto; 
+}
+.owl-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.owl-prev,
+.owl-next {
+  padding: 0 5px;
+  font-size: 30px;
+}
+/* Стилі для футера */
+.footer {
+  padding: 50px 0;
+  background-color: white;
+}
+.footer-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+}
+.form-label {
+  font-weight: bold;
+}
+.form-control {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.btn-primary {
+  display: block;
+  width: 100%;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+.contact-list {
+  list-style: none;
+  padding-left: 20%;
+  line-height: 40px;
+}
+.contact-list li {
+  margin-bottom: 10px;
+}
+.contact-list a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
+.contact-list a:hover {
+  background-image:  linear-gradient(to right, #FF66CC 0%, #66CCFF 51%, #9933FF 100%);
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  color: transparent; 
+  transition: background-image 0.3s ease;
+}
+.contact-icon{
+  margin-right: 10px;
+}
+/* Стилі для сторінки подяки */
+.body-thank-you {
+  background-image: linear-gradient(135deg, #FF66CC 0%, #66CCFF 51%, #9933FF 100%);
+}
+.container-thank-you {
+  padding-top: 20%;
+  text-align: center;
+}
+.thank-you-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; 
+  background: linear-gradient(135deg, #FF66CC 0%, #66CCFF 51%, #9933FF 100%);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+/* Стилі до сторінки Направлення */
+.directions-section{
+  margin-bottom: 20px;
+}
+.napravlennya-main {
+  margin-top: 100px;
+}
+.napravlennya-main-text{
+  text-align: center;
+  margin: auto;
+}
+.napravlennya-row {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.direction-heading {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, #FF66CC 0%, #66CCFF 51%, #9933FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 20px;
+  margin: 2% 0;
+}
+.direction-img {
+  max-width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
+.direction-card {
+  width: 400px;
+  height: 450px;
+  padding: 20px;
+  margin-bottom: 10%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.direction-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  background-color: #f0f0f0;
+}
+.open-modal-btn {
+  display: block;
+  margin: auto;
+  font-size: 15px;
+  width: 300px;
+  height: 30px;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #FF66CC 0%, #66CCFF 51%, #9933FF 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  border: none;
+}
+.open-modal-btn:hover {
+  background-position: right center;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 12%;
+  width: 75%;
+  height: 75%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 999;
+  overflow: auto;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: #fff;
+  padding: 20px;
+  max-width: 90%; 
+}
+.modal-heading {
+  font-size: 18px;
+}
+.modal-img {
+  max-width: 100%;
+  height: 450px;
+}
+.direction-text{
+  font-size: 15px;
+}
+.close {
+  position: absolute;
+  top: -5px;
+  right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+/* Форми занять */
+.formy-zanyatt{
+  margin: 100px 0 50px 0;
+}
+.img-fluid{
+  max-width: 80%;
+}
+.table-ciny{
+  max-width: 100%;
+}
+.head-text-table{
+  margin: 7% 0 3% 0;
+}
+.table thead th {
+  background: linear-gradient(to right, #FAC0D6, #AFCDE7); 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+td:first-child {
+  background: #AFCDE7;
+  color: white;
+  padding: 10px 20px;
+}
+th,
+td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.head-text-table {
+    color: #FFA7C0;
+}
+.table>:not(caption)>*>*{
+  background: #AFCDE7;
+  text-align: center;
+  border-radius: 10px;
+}
+ /* Калькулятор */
+ .calculator {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.result {
+  margin-top: 20px;
+  text-align: center;
+}
+/* Галерея зображень */
+.container-gallery {
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+.gallery .col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+/* Сторінка 404 */
+.container_404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #FF66CC 0%, #66CCFF 51%, #9933FF 100%);
+}
+.head-text-404 {
+  font-size: 120px;
+  color: #fff;
+  margin: 0;
+}
+.text-404 {
+  font-size: 24px;
+  color: #fff;
+  margin: 10px 0;
+}
+/* Стилі для цитат */
+.quote-main-container{
+  padding-top: 100px;
+}
+.blockquote-footer{
+  margin-top: 20px;
+}
+#newQuoteBtn, #getKittenButton{
+  width: 300px;
+  height: 30px;
+  font-size: 10px;
+  padding: 0;
+  margin: auto;
+}
+.kitten-img{
+  max-width: 400px;
+  height: 400px;
+}
+.head-text-cat{
+  font-size: 35px;
+  font-weight: 400;
+}
+.lead{
+  font-size: 20px;
+  text-align: justify;
+}
+/* Відгуки */
+.testimonial-slide {
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* Заголовок відгука */
+.testimonial-text {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #333;
+}
+/* Автор відгука */
+.testimonial-author {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+}
+/* Кнопки контролю слайдера */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: #f086d9;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.feedbackForm-img{
+  max-width: 91%;
+}
+/* Значок стрілки для кнопок контролю */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+/* Стилі для стрілки "Попередній" */
+.carousel-control-prev-icon::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Стилі для стрілки "Наступний" */
+.carousel-control-next-icon::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+/* Активний стиль для кнопок контролю */
+.carousel-control-prev:focus,
+.carousel-control-prev:hover,
+.carousel-control-next:focus,
+.carousel-control-next:hover {
+  background-color: #d16ad0; 
+  outline: none;
+}
+.header-vidgyku{
+  text-align: center;
+  padding: 20px 0;
+}
+/* Стилі для форми відгуків*/
+.feedbackForm-main {
+  background-color: #f0f0f0; /* Фоновий колір форми */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.feedback-section{
+  padding: 30px 0;
+}
+/* Стилі для заголовка форми */
+.feedbackForm-main h2 {
+  color: #f086d9;
+}
+/* Стилі для полів вводу */
+.feedbackForm-main .form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Стилі для кнопки "Надіслати відгук" */
+.feedbackForm-main .btn-primary {
+  background-color: #f086d9;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+/* Адаптивність */
+@media (max-width: 1400px) {
+  .direction-card {
+    width: 350px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+  .trainer-heading{
+    font-size: 35px;
+  }
+  .trainer-info{
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .contact-list li a{
+    font-size: 13px
+  }
+  .direction-heading{
+    font-size: 20px;
+  }
+  .direction-img {
+    max-width: 90%;
+  }
+  .direction-img-pilates {
+    margin-left: 10%;
+  }
+  .direction-text {
+    font-size: 15px;
+  }
+  .lead{
+    font-size: 18px;
+  }
+  .napravlennya-row {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 1164px) {
+  .modal-content {
+    padding: 10px;
+}
+}
+@media (max-width: 1144px) {
+  .modal-content {
+    padding: 4px;
+}
+}
+@media (max-width: 1120px) {
+  .modal-content {
+    padding: 4px;
+  }
+  .direction-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1044px){
+.direction-text {
+  font-size: 13px;
+}
+}
+@media (max-width: 992px) {
+  .navbar {
+    height: 90px;
+    padding: 0;
+  }
+  .navbar-nav{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+  }
+  .nav-item:hover::before {
+    display: none;
+  }
+  .nav-link:hover {
+    background-color: #f086d9;
+    background-image: linear-gradient(to right, #faa7de 0%, #96d9fb 100%);
+    z-index: -1;
+  }
+  .trainer-heading{
+    font-size: 25px;
+  }
+  .trainer-info{
+    font-size: 10px;
+    line-height: 25px;
+  }
+  .footer-heading{
+    font-size: 20px;
+  }
+  .form-label{
+    font-size: 15px;
+  }
+  .btn-contact-form{
+    height: 40px;
+    font-size: 10px;
+    padding: 0;
+  }
+  .contact-list li a{
+    font-size: 10px
+  }
+  .main-block{
+    padding-bottom: 0px;
+  }
+  .direction-heading {
+    font-size: 22px;
+  }
+  .direction-text {
+    font-size: 11px;
+  }
+  .napravlennya-main-text{
+    font-size: 30px;
+    padding-top: 20px;
+  }
+  .formy-zanyatt{
+    font-size: 30px;
+  }
+  .formy-zanyatt {
+    margin: 118px 0 50px 0;
+  }
+  .head-text-table {
+    font-size: 25px;
+  }
+  .table thead th {
+    padding: 6px 20px;
+    font-size: 15px;
+  }
+  td:first-child {
+    padding: 6px 20px;
+    font-size: 15px;
+  }
+  .gallery{
+    padding-top: 75px;
+  }
+  .lead{
+    font-size: 15px;
+  }
+  .header-vidgyku {
+    font-size: 20px;
+  }
+  .testimonial-text{
+    font-size: 15px;
+  }
+  .testimonial-slide{
+    width: 500px;
+  }
+  .img-fluid {
+    max-width: 95%;
+  }
+  .feedbackForm-main h2{
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .contact-form label{
+    font-size: 12px;
+  }
+  .contact-form input{
+    height: 30px;
+  }
+  .direction-heading {
+    font-size: 19px;
+  }
+  .open-modal-btn {
+    font-size: 12px;
+  }
+  .feedbackForm-main {
+  padding: 0 19px;
+  }
+  .feedbackForm-main h2 {
+  margin-bottom: 0.5rem!important;
+  }
+  .feedbackForm-main .btn-primary {
+  padding: 4px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .trainer-info{
+    font-size: 8px;
+    line-height: 20px;
+  }
+  .main-heading {
+    margin: 15% 0 3% 0;
+    font-size: 28px;
+  }
+  .main-block{
+    height: 500px
+  }
+  .main-text {
+    font-size: 15px;
+  }
+  #registrationButton{
+    width: 85%;
+    height: 45px;
+    font-size: 15px;
+    padding: 12px;
+  }
+  .trainer-block {
+    padding: 18px 0;
+  }
+  .trainer-heading {
+    font-size: 18px;
+  }
+  .footer-heading {
+    font-size: 18px;
+  }
+  .form-label {
+    font-size: 12px;
+  }
+  .form-control {
+    height: 33px;
+  }
+  .contact-list {
+    padding-left: 12%;
+  }
+  .contact-list li a {
+    font-size: 15px;
+  }
+  .footer-heading-contacts{
+    margin-top: 30px;
+  }
+  .napravlennya-main-text {
+    font-size: 25px;
+  }
+  .direction-heading {
+    font-size: 16px;
+  }
+  .direction-text {
+    font-size: 8px;
+  }
+  .head-text-table {
+    font-size: 20px;
+  }
+  .table thead th {
+    padding: 3px 20px;
+    font-size: 12px;
+  }
+  td:first-child {
+    padding: 4px 20px;
+    font-size: 13px;
+  }
+  tr td{
+    font-size: 13px;
+  }
+  .kitten-img{
+    width: 200px;
+  }
+  .testimonial-slide{
+    width: 400px;
+  }
+  .kitten-img{
+    width: 600px;
+  }
+  .lead{
+    margin-top: 10px;
+  }
+  .feedbackForm-main{
+    width: 490px;
+    margin: 15px 0 0 12px;
+  }
+  .thank-you-text {
+    font-size: 18px;
+  }
+  .direction-card {
+    width: 250px;
+    height: 350px;
+  }
+  .open-modal-btn {
+    font-size: 12px;
+    width: 200px;
+    height: 30px;
+  }
+  .direction-heading {
+    font-size: 12px;
+    margin: 2% 0;
+  }
+  .direction-img {
+    max-width: 100%;
+    height: 250px;
+  }
+  .modal-img {
+    height: 300px;
+  }
+  .direction-text {
+    font-size: 8px;
+  }
+  .modal-heading{
+    font-size: 10px;
+  }
+  .calculator h3{
+    font-size: 20px;
+  }
+  .form-group label{
+    font-size: 15px;
+  }
+  #calculate{
+    height: 37px;
+    font-size: 15px;
+    padding: 0;
+  }
+  .form-control option{
+    font-size: 10px;
+  }
+  .form-control{
+    font-size: 15px;
+  }
+  .formy-zanyatt-text{
+    font-size: 9px;
+  }
+  .text-404 {
+    font-size: 20px;
+  }
+  .head-text-404 {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-block {
+    height: 369px;
+  }
+  .main-heading {
+    margin: 6% 0 3% 0;
+    font-size: 25px;
+  }
+  .main-text {
+    font-size: 13px;
+  }
+  #registrationButton {
+    width: 96%;
+    height: 41px;
+    font-size: 12px;
+    padding: 12px;
+  }
+  .trainer-heading {
+    font-size: 24px;
+  }
+  .trainer-info {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .trainer-photo {
+    max-width: 62%;
+    margin-left: 18%;
+  }
+  .direction-text {
+    font-size: 8px;
+  }
+  .img-fluid {
+    max-width: 100%;
+  }
+  .formy-zanyatt {
+    font-size: 25px;
+    margin: 116px 0 18px 0;
+  }
+  .feedbackForm-main{
+    max-width: 100%;
+    margin: 15px 0 0 26px;
+  }
+  .napravlennya-row {
+    justify-content: space-around;
+  }
+  .direction-text {
+    font-size: 7px;
+  }
+  .modal-heading{
+    font-size: 9px;
+  }
+  .text-404 {
+    font-size: 15px;
+  }
+  .head-text-404 {
+    font-size: 80px;
+  }
+  .container-thank-you {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .formy-zanyatt-text{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 517px) {
+  .direction-card {
+    max-width: 220px;
+    height: 280px;
+  }
+  .napravlennya-row {
+    justify-content: space-around;
+}
+  .open-modal-btn {
+    font-size: 8px;
+    width: 150px;
+    height: 25px;
+  }
+  .direction-heading {
+    font-size: 10px;
+    margin: 2% 0;
+  }
+  .direction-img {
+    max-width: 100%;
+    height: 200px;
+  }
+  .direction-text {
+    font-size: 7px;
+    margin-bottom: 0;
+  }
+  .modal-heading{
+    font-size: 9px;
+  }
+  .formy-zanyatt-text{
+    font-size: 12px;
+  }
+  .feedbackForm-main{
+    margin: 15px 0 0 13px;
+  }
+}
+@media screen and (max-width: 493px) {
+  .contact-list li a {
+    font-size: 12px;
+  }
+  .contact-list {
+    padding-left: 6%;
+  } 
+  .feedbackForm-main{
+    max-width: 100%;
+    margin: 15px 0 0 0;
+  }
+  .testimonial-slide {
+    width: 344px;
+  }
+  .testimonial-text {
+    font-size: 13px;
+  }
+  .formy-zanyatt-text{
+    font-size: 10px;
+  }
+  tr td {
+    font-size: 10px;
+  }
+  td:first-child {
+    font-size: 11px;
+  }
+  .table thead th {
+   font-size: 10px;
+  }
+  .text-404 {
+    font-size: 12px;
+  }
+  .head-text-404 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 379px) {
+  .contact-list li a {
+    font-size: 10px;
+  }
+  .contact-list li {
+    margin-bottom: -9px;
+  }
+  .testimonial-slide {
+    width: 250px;
+  }
+  .direction-text {
+    font-size: 6px;
+  }
+  .modal-heading{
+    font-size: 7px;
+  }
+  .modal-img {
+    height: 226px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-heading {
+    margin: 1% 0 3% 0;
+    font-size: 15px;
+  }
+  .main-text {
+    font-size: 11px;
+  }
+  #registrationButton {
+    width: 96%;
+    height: 36px;
+    font-size: 9px;
+    padding: 14px;
+  }
+  .main-block {
+    height: 336px;
+  }
+  .trainer-heading {
+    font-size: 18px;
+  }
+  .trainer-info {
+    font-size: 9px;
+    line-height: 17px;
+  }
+  .footer-heading {
+    font-size: 15px;
+  }
+  .form-label {
+    font-size: 10px;
+  }
+  .form-control {
+    height: 25px;
+  }
+  .btn-contact-form {
+    height: 25px;
+    font-size: 10px;
+  }
+  .contact-list li a {
+    font-size: 9px;
+  }
+  .contact-list {
+    padding-left: 2%;
+  }
+  .navbar-logo img {
+    width: 75px;
+  }
+  .quote-main-text{
+    font-size: 27px;
+  }
+  .lead {
+    font-size: 12px;
+  }
+  .head-text-cat{
+    font-size: 27px;
+  }
+  .testimonial-slide {
+    width: 200px;
+  }
+  .testimonial-text {
+    font-size: 11px;
+  }
+}
+
+
+
+
+
+
+
+
