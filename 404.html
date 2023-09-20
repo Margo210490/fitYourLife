@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="loaderContainer" class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <div class="main-container" id="mainContent" style="display: none;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-logo" href="index.html"><img class="logoImg" src="img/logomak_logo (2).png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="napravlennya.html">Направлення</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="formuzanyatt.html">Форми занять</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Галерея</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vidgyku.html">Відгуки</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container-fluid container_404">
+    <h1 class="head-text-404">404</h1>
+    <p class="text-404">Сторінку не знайдено</p>
+    <p class="text-404">Вибачте, але сторінка, яку ви шукаєте, не існує.</p>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6">
+          <h3 class="footer-heading">Зворотній зв'язок</h3>
+          <form  id="myForm" action="telegram.php" method="POST"  class="contact-form" >
+            <div class="mb-3">
+              <label for="name" class="form-label">Ім'я</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+              <div id="name-error" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Номер телефону</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+              <div id="phone-error" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Електронна пошта</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+              <div id="email-error" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">Коментар</label>
+              <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+              <div id="comment-error" class="error-message"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-contact-form">Надіслати</button>
+          </form>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 contact-list-div" >
+          <h3 class="footer-heading footer-heading-contacts">Контакти</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:fit.your.life.with.yulia@gmail.com"><i class="contact-icon fas fa-envelope"></i> fit.your.life.with.yulia@gmail.com</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/yuliya.goncharuk.5" target="_blank"><i class="contact-icon fab fa-facebook"></i>https://www.facebook.com/yuliya.goncharuk.5</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/IULIASYSKO" target="_blank"><i class="contact-icon fab fa-instagram-square"></i>@IULIIASYSKO</a>
+            </li>
+          </ul>          
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
